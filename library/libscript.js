@@ -36,7 +36,7 @@ function displayBooks(){
         card.dataset.id=book.id;
 
         card.innerHTML=`
-            <h3>${escapeHTML(book.title)}</h3>
+            <h2>${escapeHTML(book.title)}</h2>
             <p><strong>Author: </strong>${escapeHTML(book.author)}</p>
             <p><strong>Pages: </strong>${book.pages}</p>
             <button class="status-btn ${book.read?"read":"unread"}">
@@ -67,16 +67,10 @@ function escapeHTML(str){
 
 const modal=document.getElementById("book-modal");
 const bookForm=document.getElementById("book-form");
-const newBookBtn=document.getElementById("new-book-button");
-const cancelBtn=document.getElementById("cancel-button");
+const clearBtn=document.getElementById("clear-button");
 
-newBookBtn.addEventListener("click",()=>{
+clearBtn.addEventListener("click",()=>{
     bookForm.reset();
-    modal.showModal();
-});
-
-cancelBtn.addEventListener("click",()=>{
-    modal.close();
 });
 
 bookForm.addEventListener("submit",(e)=>{
@@ -91,4 +85,30 @@ bookForm.addEventListener("submit",(e)=>{
     modal.close();
 });
 
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
+addBookToLibrary("Kartikkkk","Kartik",56,true);
 addBookToLibrary("Kartikkkk","Kartik",56,true);
