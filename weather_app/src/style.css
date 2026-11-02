@@ -629,3 +629,241 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =====================================
+   12. LAPTOP VIEWPORT OPTIMIZATION
+===================================== */
+
+/* Desktop / Laptop */
+@media (min-width: 1001px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        height: 100dvh;
+        min-height: 0;
+        overflow: hidden;
+
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        min-height: 0;
+        padding: 20px 0;
+    }
+
+    .nav-menu {
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .new-item {
+        width: 48px;
+        height: 48px;
+    }
+
+    .main-content {
+        height: 100%;
+        min-height: 0;
+        min-width: 0;
+
+        grid-template-rows: 55px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .topbar {
+        min-height: 0;
+    }
+
+    .search-box {
+        height: 48px;
+    }
+
+    .my-location {
+        padding: 13px 20px;
+    }
+
+    .dashboard-grid {
+        min-height: 0;
+        min-width: 0;
+
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+    }
+
+    .left-column,
+    .right-column {
+        min-height: 0;
+        min-width: 0;
+        gap: 18px;
+    }
+
+    .left-column {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .right-column {
+        grid-template-rows: 1.1fr 0.9fr;
+    }
+
+    /* Prevent cards from forcing extra height */
+    .weather-card,
+    .forecast-card,
+    .highlights-card,
+    .other-cities {
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .weather-card,
+    .forecast-card,
+    .highlights-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .weather-main {
+        margin-top: 10px;
+    }
+
+    .weather-main h1 {
+        font-size: clamp(45px, 5vw, 68px);
+        margin-top: 12px;
+    }
+
+    .weather-illustration {
+        font-size: clamp(60px, 7vw, 100px);
+    }
+
+    .forecast-card h2,
+    .highlights-card h2,
+    .other-cities h2 {
+        font-size: 22px;
+    }
+
+    .hourly-container {
+        margin: 12px 0;
+        gap: 8px;
+    }
+
+    .sun-info {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .sun-info span {
+        font-size: 16px;
+    }
+
+    .highlights-card h2 {
+        margin-bottom: 15px;
+    }
+
+    .highlights-grid {
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        min-height: 0;
+    }
+
+    .highlight-item {
+        padding: 14px;
+        min-height: 0;
+    }
+
+    .highlight-item h3 {
+        font-size: 14px;
+    }
+
+    .highlight-item p {
+        font-size: 25px;
+    }
+
+    .other-cities {
+        padding: 5px 0;
+    }
+
+    .other-cities h2 {
+        margin-bottom: 12px;
+    }
+
+    #cities-container {
+        gap: 12px;
+    }
+
+    #cities-container > div {
+        min-height: 0;
+        padding: 15px;
+    }
+}
+
+
+/* =====================================
+   13. SMALLER SCREENS
+===================================== */
+
+@media (max-width: 1000px) {
+
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100dvh;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .main-content {
+        height: auto;
+        min-height: 0;
+    }
+
+    .dashboard-grid {
+        min-height: 0;
+    }
+
+    .weather-card,
+    .forecast-card,
+    .highlights-card {
+        min-height: 280px;
+    }
+
+    .highlights-grid {
+        grid-template-rows: repeat(2, minmax(120px, auto));
+    }
+}
+
+
+/* =====================================
+   14. MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        min-height: 100dvh;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .main-content {
+        height: auto;
+    }
+
+    .weather-card,
+    .forecast-card,
+    .highlights-card {
+        min-height: 250px;
+    }
+}
